@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte Mensual LRS — Julio 2026</title>
+<style>
+:root{--nv:#0d2340;--nvl:#1a3a5c;--nvm:#1e4976;--ms:#c8922a;--msl:#f0b942;--msp:#fdf3dc;--wh:#fff;--of:#f7f8fa;--gl:#e8edf3;--gm:#8a9ab0;--su:#1a7a4a;--da:#c0392b;--sub:#e8f7ef;--yt:#cc0000;--fb:#1877f2;--ig:#e1306c;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--of);color:var(--nv);}
+.hdr{background:var(--nv);padding:28px 36px 22px;border-bottom:4px solid var(--ms);display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;}
+.hdr h1{color:#fff;font-size:22px;font-weight:500;letter-spacing:-.3px;}
+.hdr p{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px;}
+.pill{background:var(--ms);color:var(--nv);font-size:11px;font-weight:600;padding:5px 13px;border-radius:20px;}
+.pill2{background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);font-size:11px;padding:5px 11px;border-radius:20px;border:.5px solid rgba(255,255,255,.25);}
+.tabs{background:var(--nvl);display:flex;padding:0 36px;border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab-btn{color:rgba(255,255,255,.5);font-size:12px;padding:11px 14px;cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;}
+.tab-btn:hover{color:rgba(255,255,255,.85);}
+.tab-btn.on{color:var(--msl);border-bottom-color:var(--msl);font-weight:500;}
+.sec{display:none;padding:28px 36px;max-width:1100px;margin:0 auto;}
+.sec.on{display:block;}
+.slbl{font-size:10px;font-weight:600;color:var(--ms);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;}
+.stit{font-size:18px;font-weight:500;color:var(--nv);margin-bottom:18px;}
+.sbar{background:var(--nv);border-radius:12px;padding:14px 20px;display:flex;justify-content:space-around;margin-bottom:18px;flex-wrap:wrap;gap:10px;}
+.sb-v{font-size:18px;font-weight:500;color:var(--msl);text-align:center;}
+.sb-l{font-size:10px;color:rgba(255,255,255,.55);margin-top:1px;text-align:center;}
+.plthead{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:7px;border-bottom:.5px solid var(--gl);}
+.pico{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.pico.fb{background:var(--fb);color:#fff;}.pico.yt{background:var(--yt);color:#fff;}
+.ptit{font-size:14px;font-weight:500;color:var(--nv);}
+.pbdg{font-size:11px;color:var(--gm);margin-left:auto;}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:18px;}
+.cc{background:var(--wh);border:.5px solid var(--gl);border-radius:12px;padding:14px;}
+.cc-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;}
+.cc-nm{font-size:13px;font-weight:500;color:var(--nv);line-height:1.3;padding-right:6px;}
+.cc-gl{font-size:9.5px;padding:2px 7px;border-radius:7px;font-weight:600;flex-shrink:0;}
+.gv{background:#e6edf5;color:var(--nv);}.gl2{background:var(--sub);color:var(--su);}.gp{background:var(--msp);color:var(--ms);}
+.cc-ad{font-size:10.5px;color:var(--gm);margin-bottom:8px;line-height:1.35;}
+.cc-plts{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;}
+.plt{display:flex;align-items:center;gap:3px;font-size:10.5px;font-weight:500;padding:2px 8px;border-radius:7px;}
+.plt-fb{background:#e8f0fe;color:var(--fb);}.plt-yt{background:#fdecea;color:var(--yt);}.plt-ig{background:#fce4ec;color:var(--ig);}.plt-pm{background:#f3e5f5;color:#6a1b9a;}
+.pd{width:5px;height:5px;border-radius:50%;}
+.cc-mt{display:flex;gap:10px;font-size:10.5px;color:var(--gm);border-top:.5px solid var(--gl);padding-top:7px;flex-wrap:wrap;}
+.cc-cv{display:inline-block;background:var(--nv);color:#fff;font-size:9.5px;font-weight:500;padding:2px 8px;border-radius:9px;margin-bottom:6px;}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:18px;}
+.kcard{background:var(--wh);border:.5px solid var(--gl);border-radius:12px;padding:14px;}
+.kcard.acc{border-left:3px solid var(--ms);}
+.klbl{font-size:11px;color:var(--gm);margin-bottom:5px;}
+.kval{font-size:21px;font-weight:500;color:var(--nv);}
+.kdelta{font-size:11px;margin-top:4px;}
+.up{color:var(--su);}.dn{color:var(--da);}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+.card{background:var(--wh);border:.5px solid var(--gl);border-radius:12px;padding:18px;margin-bottom:14px;}
+.card:last-child{margin-bottom:0;}
+.ctit{font-size:13px;font-weight:500;color:var(--nv);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:5px;}
+.bdg{display:inline-block;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:500;}
+.bdg.ms{background:var(--msp);color:var(--ms);}.bdg.nv{background:#e6edf5;color:var(--nv);}.bdg.aug{background:#e8f7ef;color:var(--su);}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.tbl th{background:var(--nv);color:#fff;padding:8px 10px;text-align:left;font-weight:500;white-space:nowrap;}
+.tbl th:not(:first-child){text-align:right;}
+.tbl td{padding:8px 10px;border-bottom:.5px solid var(--gl);color:var(--nv);}
+.tbl td:not(:first-child){text-align:right;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl tr:nth-child(even) td{background:var(--of);}
+.pos{color:var(--su);font-weight:500;}.neg{color:var(--da);font-weight:500;}.neu{color:var(--gm);}
+.bl-sec{background:var(--wh);border:.5px solid var(--gl);border-radius:12px;padding:18px;margin-bottom:14px;}
+.bl{display:flex;gap:10px;padding:8px 0;border-bottom:.5px solid var(--gl);font-size:13px;line-height:1.6;color:var(--nv);}
+.bl:last-child{border-bottom:none;padding-bottom:0;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ms);flex-shrink:0;margin-top:6px;}
+.bar-row{display:flex;align-items:center;gap:10px;font-size:12.5px;margin-bottom:9px;}
+.bar-lbl{width:50px;color:var(--gm);}
+.bar-t{flex:1;height:8px;background:var(--gl);border-radius:4px;overflow:hidden;}
+.bar-f{height:100%;border-radius:4px;}
+.bar-v{width:36px;text-align:right;font-weight:500;}
+.gender-row{display:flex;gap:10px;margin-bottom:14px;}
+.gender-pill{flex:1;border-radius:10px;padding:12px;text-align:center;}
+.gp-lbl{font-size:10px;color:var(--gm);margin-bottom:5px;}
+.gp-val{font-size:20px;font-weight:500;}
+.ns-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.nsc{background:var(--nv);border-radius:12px;padding:18px;}
+.nsc .n{color:var(--ms);font-size:18px;font-weight:500;margin-bottom:3px;}
+.nsc .t{color:#fff;font-size:13px;font-weight:500;margin-bottom:4px;}
+.nsc .d{color:rgba(255,255,255,.65);font-size:12px;line-height:1.6;}
+.bud-hero{background:var(--nv);border-radius:12px;padding:20px 24px;margin-bottom:18px;}
+.bud-hero h2{color:var(--msl);font-size:18px;font-weight:500;margin-bottom:3px;}
+.bud-hero p{color:rgba(255,255,255,.6);font-size:12px;margin-bottom:16px;}
+.bud-row{display:flex;gap:12px;flex-wrap:wrap;}
+.bud-kpi{background:rgba(255,255,255,.08);border-radius:10px;padding:12px 16px;flex:1;min-width:120px;}
+.bv{font-size:20px;font-weight:500;color:#fff;}
+.bkl{font-size:10px;color:rgba(255,255,255,.5);margin-bottom:3px;}
+.bkd{font-size:11px;margin-top:3px;}
+.bbar-lbl{display:flex;justify-content:space-between;font-size:11px;color:var(--gm);margin-bottom:3px;}
+.btrack{height:8px;background:var(--gl);border-radius:4px;overflow:hidden;margin-bottom:10px;}
+.bfill{height:100%;border-radius:4px;}
+.note-aug{background:#e8f7ef;border:.5px solid var(--su);border-radius:10px;padding:11px 14px;font-size:12px;color:var(--su);line-height:1.5;margin-bottom:14px;}
+.note-aug strong{color:var(--su);}
+@media print{
+  .tabs{display:none;}
+  .sec{display:block!important;page-break-after:always;padding:24px 28px;}
+  .sec:last-child{page-break-after:avoid;}
+  body{background:#fff;}
+  .hdr,.sbar,.bud-hero,.nsc,.tbl th,.pico,.cc-gl,.plt,.bdg,.bar-f,.bfill,.kcard.acc,.note-aug{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+@media(max-width:680px){.r2,.ns-grid,.cgrid,.bud-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div>
+    <h1>Reporte mensual de campañas · LRS</h1>
+    <p>Período: julio 2026 · Comparativo vs junio 2026 · Planificación agosto 2026</p>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+    <span class="pill">Julio 2026</span>
+    <span class="pill2">Jun → Jul → Ago</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn on" onclick="st('camp',this)">0 · Campañas</button>
+  <button class="tab-btn" onclick="st('demo',this)">A · Audiencia</button>
+  <button class="tab-btn" onclick="st('cr',this)">B · CR & Ventas</button>
+  <button class="tab-btn" onclick="st('yt',this)">C · YouTube</button>
+  <button class="tab-btn" onclick="st('gads',this)">D · Google Ads</button>
+  <button class="tab-btn" onclick="st('meta',this)">E · Meta Ads</button>
+  <button class="tab-btn" onclick="st('insights',this)">F · Análisis</button>
+  <button class="tab-btn" onclick="st('next',this)">G · Next Steps</button>
+  <button class="tab-btn" onclick="st('budget',this)">H · Budget Agosto</button>
+</div>
+
+<!-- 0: CAMPAÑAS JULIO -->
+<div class="sec on" id="sec-camp">
+  <div class="slbl">Sección 0</div>
+  <div class="stit">Campañas activas — julio 2026</div>
+  <div class="sbar">
+    <div><div class="sb-v">11</div><div class="sb-l">Campañas activas</div></div>
+    <div><div class="sb-v">$11,445</div><div class="sb-l">Budget total</div></div>
+    <div><div class="sb-v">$5,725</div><div class="sb-l">Meta (FB / IG)</div></div>
+    <div><div class="sb-v">$5,720</div><div class="sb-l">Google (YT / PMax)</div></div>
+    <div><div class="sb-v">3 objetivos</div><div class="sb-l">Venta · Lead · Posicionamiento</div></div>
+  </div>
+
+  <div style="margin-bottom:18px;">
+    <div class="plthead"><div class="pico fb">f</div><div class="ptit">Meta Ads — Facebook & Instagram</div><span class="pbdg">$5,725 · 4 campañas</span></div>
+    <div class="cgrid">
+      <div class="cc">
+        <div class="cc-cv">2 ventas</div>
+        <div class="cc-hd"><div class="cc-nm">WEB 10 — BOFU</div><span class="cc-gl gv">VENTA</span></div>
+        <div class="cc-ad">LRS - BOFU - CV LP Web 10 min CCPW HG 2025</div>
+        <div class="cc-plts"><span class="plt plt-fb"><span class="pd" style="background:var(--fb)"></span>Facebook</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$45/día · $1,395</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">Masterclass CCPW 2026 — BOFU</div><span class="cc-gl gv">VENTA</span></div>
+        <div class="cc-ad">LRS-BOFU-CV-Masterclass CCPW HG 2026</div>
+        <div class="cc-plts"><span class="plt plt-fb"><span class="pd" style="background:var(--fb)"></span>Facebook · Desktop</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$40/día · $1,240</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-cv">79 ventas</div>
+        <div class="cc-hd"><div class="cc-nm">Retargeting Membresía FB</div><span class="cc-gl gv">VENTA</span></div>
+        <div class="cc-ad">LRS - BOFU- RG- Membresia -FB-Nueva</div>
+        <div class="cc-plts"><span class="plt plt-fb"><span class="pd" style="background:var(--fb)"></span>Facebook · Desktop</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$40/día · $1,320</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">Masterclass FB — Lead Gen</div><span class="cc-gl gl2">LEAD</span></div>
+        <div class="cc-ad">LRS - MOFU- LG- Masterclass HG 2025 -FB - Nuevo Opt</div>
+        <div class="cc-plts"><span class="plt plt-fb"><span class="pd" style="background:var(--fb)"></span>Facebook · Desktop/Mobile</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$30/día · $885</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-cv">228 leads</div>
+        <div class="cc-hd"><div class="cc-nm">Masterclass IG — Lead Gen</div><span class="cc-gl gl2">LEAD</span></div>
+        <div class="cc-ad">LRS - MOFU- LG- Masterclass HG 2025 -IG - Nueva Optimiz</div>
+        <div class="cc-plts"><span class="plt plt-ig"><span class="pd" style="background:var(--ig)"></span>Instagram · Desktop/Mobile</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$30/día · $885</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="plthead"><div class="pico yt">▶</div><div class="ptit">Google Ads — YouTube & Performance Max</div><span class="pbdg">$5,720 · 6 campañas</span></div>
+    <div class="cgrid">
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">Curso HG Video Largo</div><span class="cc-gl gp">POSICIONAMIENTO</span></div>
+        <div class="cc-ad">00 07102025 Curso HG- Video Largo</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube · Desktop</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$20/día · $660</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-cv">11,982 visitas</div>
+        <div class="cc-hd"><div class="cc-nm">Masterclass CCPW Posicionamiento</div><span class="cc-gl gp">POSICIONAMIENTO</span></div>
+        <div class="cc-ad">00 08032026 Masterclass CCPW- Posicionamiento video Largo</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube</span></div>
+        <div class="cc-mt"><span>COL-5 · MEX-5 · PER-6 · USA-4</span><span>$40/día · $1,240</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">Promo Corta Masterclass</div><span class="cc-gl gp">POSICIONAMIENTO</span></div>
+        <div class="cc-ad">00 17022026 Promociones cortas Masterclass Ene 2026</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube · Desktop</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$30/día · $930</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-cv">2,812 visitas</div>
+        <div class="cc-hd"><div class="cc-nm">CCPW con IA en HG — Views</div><span class="cc-gl gp">POSICIONAMIENTO</span></div>
+        <div class="cc-ad">00 15042026 CCPW con IA en HG- Views</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube · Desktop</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$40/día · $1,200</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">CCPW Performance Max</div><span class="cc-gl gv">VENTA</span></div>
+        <div class="cc-ad">00 08102025 CCPW-PerformanceMax</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube</span><span class="plt plt-pm"><span class="pd" style="background:#6a1b9a"></span>PMax</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$30/día · $930</span></div>
+      </div>
+      <div class="cc">
+        <div class="cc-hd"><div class="cc-nm">Retargeting Membresía PMax</div><span class="cc-gl gv">VENTA</span></div>
+        <div class="cc-ad">00 04062026 Promo Membresia 2026 HG-Retargeting-PMax</div>
+        <div class="cc-plts"><span class="plt plt-yt"><span class="pd" style="background:var(--yt)"></span>YouTube · Desktop</span><span class="plt plt-pm"><span class="pd" style="background:#6a1b9a"></span>PMax</span></div>
+        <div class="cc-mt"><span>Jul 1–31</span><span>$30/día · $760</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- A: AUDIENCIA -->
+<div class="sec" id="sec-demo">
+  <div class="slbl">Sección A</div>
+  <div class="stit">Distribución demográfica — julio 2026</div>
+  <div class="r2">
+    <div class="card">
+      <div class="ctit">Por edad</div>
+      <div class="bar-row"><span class="bar-lbl">18–24</span><div class="bar-t"><div class="bar-f" style="width:22%;background:var(--nv);"></div></div><span class="bar-v">22%</span></div>
+      <div class="bar-row"><span class="bar-lbl">25–34</span><div class="bar-t"><div class="bar-f" style="width:38%;background:var(--nv);"></div></div><span class="bar-v">38%</span></div>
+      <div class="bar-row"><span class="bar-lbl">35–44</span><div class="bar-t"><div class="bar-f" style="width:25%;background:var(--nvm);"></div></div><span class="bar-v">25%</span></div>
+      <div class="bar-row"><span class="bar-lbl">45–54</span><div class="bar-t"><div class="bar-f" style="width:10%;background:var(--nvm);"></div></div><span class="bar-v">10%</span></div>
+      <div class="bar-row"><span class="bar-lbl">55+</span><div class="bar-t"><div class="bar-f" style="width:5%;background:var(--ms);"></div></div><span class="bar-v">5%</span></div>
+    </div>
+    <div class="card">
+      <div class="ctit">Por género</div>
+      <div class="gender-row">
+        <div class="gender-pill" style="background:var(--msp);border:.5px solid var(--ms);"><div class="gp-lbl">Mujeres</div><div class="gp-val" style="color:var(--ms);">62%</div></div>
+        <div class="gender-pill" style="background:var(--of);border:.5px solid var(--gl);"><div class="gp-lbl">Hombres</div><div class="gp-val" style="color:var(--nv);">36%</div></div>
+        <div class="gender-pill" style="background:var(--of);border:.5px solid var(--gl);"><div class="gp-lbl">Otro</div><div class="gp-val" style="color:var(--nv);">2%</div></div>
+      </div>
+      <p style="font-size:12px;color:var(--gm);line-height:1.6;">El segmento 25–34 lidera conversiones. Leads de Masterclass FB e IG muestran alta cobertura en Mobile y Desktop.</p>
+    </div>
+  </div>
+</div>
+
+<!-- B: CR & VENTAS -->
+<div class="sec" id="sec-cr">
+  <div class="slbl">Sección B</div>
+  <div class="stit">CR Total · Ventas · Leads — junio vs julio 2026</div>
+  <div class="kgrid">
+    <div class="kcard acc"><div class="klbl">CR Total julio</div><div class="kval">2.59%</div><div class="kdelta dn">↓ vs junio: 3.29%</div></div>
+    <div class="kcard acc"><div class="klbl">Ventas julio</div><div class="kval">159</div><div class="kdelta dn">↓ vs junio: 227</div></div>
+    <div class="kcard acc"><div class="klbl">Leads julio (IG CSV)</div><div class="kval">228</div><div class="kdelta" style="color:var(--gm);font-size:11px;">Masterclass IG confirmado</div></div>
+    <div class="kcard"><div class="klbl">Budget total julio</div><div class="kval">$11,445</div><div class="kdelta dn">↓ vs junio: $11,510</div></div>
+  </div>
+  <div class="card">
+    <div class="ctit">Resultados — junio vs julio 2026</div>
+    <table class="tbl">
+      <thead><tr><th>Métrica</th><th>Mayo 2026</th><th>Junio 2026</th><th>Julio 2026</th><th>Δ Jun→Jul</th></tr></thead>
+      <tbody>
+        <tr><td>CR Total (%)</td><td>2.83%</td><td>3.29%</td><td>2.59%</td><td class="neg">–0.70 pp</td></tr>
+        <tr><td>Ventas totales</td><td>286</td><td>227</td><td>159</td><td class="neg">–68 (–30%)</td></tr>
+        <tr><td>CR Main LP (%)</td><td>26.39%</td><td>21.05%</td><td>9.29%</td><td class="neg">–11.76 pp</td></tr>
+        <tr><td>Clicks totales</td><td>4,558</td><td>3,597</td><td>3,656</td><td class="pos">+59 (+2%)</td></tr>
+        <tr><td>Budget total</td><td>$11,745</td><td>$11,510</td><td>$11,445</td><td class="neg">–$65</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- C: YOUTUBE -->
+<div class="sec" id="sec-yt">
+  <div class="slbl">Sección C</div>
+  <div class="stit">YouTube — junio vs julio 2026</div>
+  <div class="kgrid">
+    <div class="kcard acc"><div class="klbl">Vistas totales junio</div><div class="kval">2,509,988</div><div class="kdelta" style="color:var(--gm);font-size:11px;">Looker Studio</div></div>
+    <div class="kcard acc"><div class="klbl">Vistas totales julio</div><div class="kval">1,995,563</div><div class="kdelta dn">↓ –514,425 (–20%)</div></div>
+    <div class="kcard acc"><div class="klbl">Nuevos suscriptores julio</div><div class="kval">384</div><div class="kdelta dn">↓ vs junio: 402</div></div>
+    <div class="kcard"><div class="klbl">Ventas atribuidas YT julio</div><div class="kval">135</div><div class="kdelta dn">↓ vs junio: 199</div></div>
+  </div>
+  <div class="card">
+    <div class="ctit">KPIs YouTube — mayo · junio · julio</div>
+    <table class="tbl">
+      <thead><tr><th>Métrica YT</th><th>Mayo 2026</th><th>Junio 2026</th><th>Julio 2026</th><th>Δ Jun→Jul</th></tr></thead>
+      <tbody>
+        <tr><td>Vistas totales</td><td>3,103,553</td><td>2,509,988</td><td>1,995,563</td><td class="neg">–514,425 (–20%)</td></tr>
+        <tr><td>Nuevos suscriptores</td><td>678</td><td>402</td><td>384</td><td class="neg">–18 (–4%)</td></tr>
+        <tr><td>Ventas atribuidas YT</td><td>230</td><td>199</td><td>135</td><td class="neg">–64 (–32%)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- D: GOOGLE ADS -->
+<div class="sec" id="sec-gads">
+  <div class="slbl">Sección D · Google Ads</div>
+  <div class="stit">Google Ads — junio vs julio 2026</div>
+  <div class="kgrid">
+    <div class="kcard acc"><div class="klbl">Budget Google junio</div><div class="kval">$5,560</div><div class="kdelta" style="color:var(--gm);">Daily ~$190</div></div>
+    <div class="kcard acc"><div class="klbl">Budget Google julio</div><div class="kval">$5,720</div><div class="kdelta up">↑ +$160 vs junio</div></div>
+    <div class="kcard acc"><div class="klbl">Vistas totales junio</div><div class="kval">12,941</div><div class="kdelta" style="color:var(--gm);font-size:11px;">CSV junio</div></div>
+    <div class="kcard acc"><div class="klbl">Vistas totales julio</div><div class="kval">11,982</div><div class="kdelta dn">↓ –959 (–7%)</div></div>
+  </div>
+  <div class="card">
+    <div class="ctit">Posicionamiento YouTube — junio vs julio <span class="bdg ms">del CSV</span></div>
+    <table class="tbl">
+      <thead><tr><th>Campaña</th><th>Posición junio</th><th>Posición julio</th><th>Visitas junio</th><th>Visitas julio</th><th>Δ</th></tr></thead>
+      <tbody>
+        <tr><td>Masterclass CCPW Posicionamiento</td><td>COL-2 / USA-1 / PER-2 / MEX-2</td><td>COL-5 / MEX-5 / PER-6 / USA-4</td><td>9,515</td><td>11,982</td><td class="pos">+2,467</td></tr>
+        <tr><td>CCPW con IA — Views</td><td>—</td><td>—</td><td>3,426</td><td>2,812</td><td class="neg">–614</td></tr>
+        <tr><td>Curso HG Video Largo</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>Promo Corta Masterclass</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td><strong>Total visitas orgánicas</strong></td><td></td><td></td><td><strong>12,941</strong></td><td><strong>11,982</strong></td><td class="neg"><strong>–959 (–7%)</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ctit">Comparativo budget Google — junio vs julio</div>
+    <table class="tbl">
+      <thead><tr><th>Campaña</th><th>Budget junio</th><th>Budget julio</th><th>Δ</th></tr></thead>
+      <tbody>
+        <tr><td>Curso HG Video Largo</td><td>$900</td><td>$660</td><td class="neg">–$240</td></tr>
+        <tr><td>Masterclass CCPW Posicionamiento</td><td>$1,200</td><td>$1,240</td><td class="pos">+$40</td></tr>
+        <tr><td>Promo Corta Masterclass</td><td>$900</td><td>$930</td><td class="pos">+$30</td></tr>
+        <tr><td>CCPW con IA — Views</td><td>$900</td><td>$1,200</td><td class="pos">+$300</td></tr>
+        <tr><td>CCPW Performance Max</td><td>$900</td><td>$930</td><td class="pos">+$30</td></tr>
+        <tr><td>Retargeting Membresía PMax</td><td>$760</td><td>$760</td><td class="neu">$0</td></tr>
+        <tr><td><strong>Total Google</strong></td><td><strong>$5,560</strong></td><td><strong>$5,720</strong></td><td class="pos"><strong>+$160</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- E: META ADS -->
+<div class="sec" id="sec-meta">
+  <div class="slbl">Sección E · Meta Ads</div>
+  <div class="stit">Meta Ads — junio vs julio 2026</div>
+  <div class="kgrid">
+    <div class="kcard acc"><div class="klbl">Ventas Meta junio</div><div class="kval">8</div><div class="kdelta" style="color:var(--gm);font-size:11px;">Retargeting FB</div></div>
+    <div class="kcard acc"><div class="klbl">Ventas Meta julio</div><div class="kval">11</div><div class="kdelta up">↑ +3 (+38%) vs junio</div></div>
+    <div class="kcard acc"><div class="klbl">Leads Masterclass IG + FB julio</div><div class="kval">539</div><div class="kdelta" style="color:var(--gm);font-size:11px;">IG: 201 · FB: 338</div></div>
+    <div class="kcard acc"><div class="klbl">Budget Meta julio</div><div class="kval">$5,725</div><div class="kdelta dn">↓ vs junio: $5,950</div></div>
+  </div>
+  <div class="card">
+    <div class="ctit">Meta Ads — junio vs julio 2026</div>
+    <div style="overflow-x:auto;">
+      <table class="tbl" style="min-width:620px;">
+        <thead><tr><th>Campaña</th><th>Ventas jun</th><th>Ventas jul</th><th>Leads jun</th><th>Leads jul</th><th>CPR jun</th><th>CPR jul</th><th>Δ ventas</th></tr></thead>
+        <tbody>
+          <tr><td>WEB 10 — BOFU</td><td>1</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="pos">+1</td></tr>
+          <tr><td>Masterclass CCPW</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Retargeting Membresía FB</td><td>35</td><td>79</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="pos">+44</td></tr>
+          <tr><td>Masterclass FB Leads</td><td>—</td><td>—</td><td>295</td><td>338</td><td>$3.04</td><td>$2.49</td><td class="pos">+43 leads</td></tr>
+          <tr><td>Masterclass IG Leads</td><td>—</td><td>—</td><td>282</td><td>201</td><td>$2.66</td><td>$4.38</td><td class="neg">–81 leads</td></tr>
+          <tr><td><strong>TOTAL</strong></td><td><strong>8</strong></td><td><strong>11</strong></td><td><strong>577</strong></td><td><strong>539</strong></td><td>—</td><td>—</td><td class="pos"><strong>+3 ventas</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctit">Mejor rendimiento julio — Meta</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12.5px;">
+      <div style="border:.5px solid var(--gl);border-radius:10px;overflow:hidden;">
+        <div style="background:var(--nv);padding:10px 14px;"><div style="color:var(--msl);font-weight:500;margin-bottom:2px;">Retargeting Membresía FB</div><div style="color:rgba(255,255,255,.55);font-size:10.5px;">BOFU · Facebook Desktop · 79 ventas</div></div>
+        <div style="padding:14px;"><p style="color:var(--gm);font-size:11px;margin-bottom:6px;">$1,320 invertidos · +44 ventas vs junio</p><p style="line-height:1.6;color:var(--nv);">La reducción de presupuesto ($60→$40 daily) no afectó negativamente — por el contrario, las ventas se más que duplicaron respecto a junio. Los nuevos creativos y la audiencia renovada están funcionando.</p></div>
+      </div>
+      <div style="border:.5px solid var(--gl);border-radius:10px;overflow:hidden;">
+        <div style="background:var(--nvl);padding:10px 14px;"><div style="color:var(--msl);font-weight:500;margin-bottom:2px;">Masterclass FB — Lead Gen</div><div style="color:rgba(255,255,255,.55);font-size:10.5px;">MOFU · Facebook · CPL mejorado</div></div>
+        <div style="padding:14px;"><p style="color:var(--gm);font-size:11px;margin-bottom:6px;">CPL bajó de $3.04 (jun) a $2.49 (jul)</p><p style="line-height:1.6;color:var(--nv);">Mejor CPL del mes. Los nuevos ads de leads en FB están mostrando mayor eficiencia. Recomendar incremento de presupuesto en agosto para capturar más leads a este costo.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- F: ANÁLISIS -->
+<div class="sec" id="sec-insights">
+  <div class="slbl">Sección F</div>
+  <div class="stit">Análisis de resultados — julio vs junio 2026</div>
+
+  <!-- META ADS ANALYSIS -->
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+    <div class="pico fb" style="width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:var(--fb);color:#fff;">f</div>
+    <span style="font-size:14px;font-weight:500;color:var(--nv);">Meta Ads</span>
+    <span class="bdg ms" style="margin-left:auto;">Key Learnings</span>
+  </div>
+  <div class="bl-sec" style="margin-bottom:22px;">
+    <div class="bl"><div class="dot"></div><p>CR Main LP cayó drásticamente de 21.05% (junio) a 9.29% (julio) — la caída más preocupante del mes. Indica un problema en la conversión de la landing page que debe diagnosticarse con prioridad en agosto.</p></div>
+    <div class="bl"><div class="dot"></div><p>Retargeting Membresía FB se recuperó con fuerza: 79 ventas en julio vs 35 en junio (+126%), con budget reducido ($1,320 vs $1,800). Los nuevos creativos y el ajuste de daily ($60→$40) dieron resultado — el menor presupuesto no fue un freno sino un filtro de calidad.</p></div>
+    <div class="bl"><div class="dot"></div><p>Masterclass FB fue el canal MOFU ganador del mes: CPL bajó de $3.04 a $2.49 (–18%) y los leads subieron de 295 a 338 (+15%). Los nuevos creativos están funcionando — candidato claro a aumentar presupuesto en agosto.</p></div>
+    <div class="bl"><div class="dot"></div><p>Las ventas de Meta mejoraron respecto a junio (8→11), impulsadas por Retargeting (+44 ventas) y WEB 10 (+1). La tendencia de recuperación en BOFU es positiva siempre que se mantenga el flujo de leads frescos en MOFU.</p></div>
+  </div>
+
+  <!-- GOOGLE ADS ANALYSIS -->
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+    <div class="pico yt" style="width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:var(--yt);color:#fff;">▶</div>
+    <span style="font-size:14px;font-weight:500;color:var(--nv);">Google Ads & YouTube</span>
+    <span class="bdg ms" style="margin-left:auto;">Key Learnings</span>
+  </div>
+  <div class="bl-sec">
+    <div class="bl"><div class="dot"></div><p>YouTube orgánico lleva 3 meses consecutivos a la baja: mayo 3.1M → junio 2.5M → julio 2.0M visitas (–36% acumulado). Las ventas atribuidas a YT también bajan: 230 → 199 → 135. Se requiere revisar la estrategia de contenido orgánico.</p></div>
+    <div class="bl"><div class="dot"></div><p>Masterclass CCPW perdió posiciones en YT (COL 2→5, MEX 2→5, PER 2→6, USA 1→4) pero las visitas orgánicas subieron de 9,515 a 11,982 (+26%). El mayor volumen de búsquedas estacionales en julio compensó la pérdida de posición.</p></div>
+    <div class="bl"><div class="dot"></div><p>CCPW con IA subió budget a $1,200 pero las visitas bajaron de 3,426 a 2,812 (–18%). El posicionamiento en keywords de Hostinger está en desarrollo — se necesita más tiempo para evaluar el ROI de este incremento acumulado.</p></div>
+    <div class="bl"><div class="dot"></div><p>Disminuir el presupuesto del video "Curso HG" impactó directamente las ventas. El recorte de $900 a $660 en julio fue un error — hay que replantear el aumento para agosto y evaluar si también se requiere actualizar el video.</p></div>
+    <div class="bl"><div class="dot"></div><p>Las dos primeras semanas de julio la campaña PMax tuvo pocas impresiones, afectando el tráfico en la LP principal y las posibles visitas de retargeting. El problema ya fue solucionado, pero impactó los resultados de la primera mitad del mes.</p></div>
+    <div class="bl"><div class="dot"></div><p>Para agosto, el budget de Google sube significativamente (+$1,002): los mayores incrementos van a PMax Membresía (+$440) y CCPW PMax (+$332). Esta apuesta por conversión puede compensar la caída orgánica si los creativos están bien optimizados.</p></div>
+  </div>
+</div>
+
+<!-- G: NEXT STEPS -->
+<div class="sec" id="sec-next">
+  <div class="slbl">Sección G</div>
+  <div class="stit">Next steps — agosto 2026</div>
+  <div class="ns-grid">
+    <div class="nsc"><div class="n">01</div><div class="t">Diagnosticar caída CR Main LP</div><div class="d">El CR de la LP pasó de 21.05% a 9.29% en julio — caída crítica. Revisar cambios en la landing, velocidad de carga, copy y formulario. Prioridad máxima.</div></div>
+    <div class="nsc"><div class="n">02</div><div class="t">Video "Curso HG" — replantear estrategia</div><div class="d">Las ventas han disminuido considerablemente. Opción A: Hacer update del video. Opción B: Aumentar presupuesto de awareness para que se incremente.<br><br><em style="color:rgba(255,255,255,.5);font-size:11px;">Nota: El video no se ha actualizado hace más de un año — posible fatiga de audiencia.</em></div></div>
+    <div class="nsc"><div class="n">03</div><div class="t">Aumentar PMax general a $42 USD/día</div><div class="d">Aumentar presupuesto a $42 USD/día en campañas PMax general para que la campaña de retargeting no llegue a fatiga y se puedan aumentar conversiones cross-channel con Meta Ads.<br><br><em style="color:rgba(255,255,255,.5);font-size:11px;">Nota: La campaña ya está teniendo las impresiones correctas.</em></div></div>
+    <div class="nsc"><div class="n">04</div><div class="t">Testear video "Hostinger con Descuento"</div><div class="d">Promocionar el video "Hostinger con Descuento Sin Trucos + Regalo Extra" incluyéndolo dentro de Curso HG. Testear comportamiento 2 semanas — si no hay resultados, separarlo en campaña independiente.</div></div>
+    <div class="nsc"><div class="n">05</div><div class="t">Aumentar Retargeting Meta a $50 USD/día</div><div class="d">Se estará enviando más tráfico a las LPs desde PMax, lo que justifica aumentar el retargeting de Meta a $50 USD/día para capturar ese tráfico adicional en BOFU.</div></div>
+    <div class="nsc"><div class="n">06</div><div class="t">Aumentar Retargeting Google a $40 USD/día</div><div class="d">Con más tráfico a las LPs desde PMax, aumentar también el retargeting de Google a $40 USD/día para maximizar las conversiones cross-channel.</div></div>
+    <div class="nsc"><div class="n">07</div><div class="t">Activar nurturing leads acumulados</div><div class="d">Pipeline: 533 (mayo) + 577 (junio) + 539 (julio) = 1,649 leads. Secuencia email + Manychat con CTA Hostinger para convertir en agosto–septiembre.<br><br><em style="color:rgba(255,255,255,.5);font-size:11px;">Nota: Post Mundial.</em></div></div>
+    <div class="nsc"><div class="n">08</div><div class="t">Nuevo video "Web en 10" en YouTube Ads</div><div class="d">Rodar el nuevo video en YouTube Ads — finales de agosto / principios de septiembre.<br><br><em style="color:rgba(255,255,255,.5);font-size:11px;">Nota: No está incluido en el presupuesto actual — esto se debe discutir.</em></div></div>
+  </div>
+</div>
+
+<!-- H: BUDGET AGOSTO -->
+<div class="sec" id="sec-budget">
+  <div class="slbl">Sección H</div>
+  <div class="stit">Budget agosto 2026 — planificación y comparativo</div>
+  <div class="note-aug"><strong>Planificación agosto:</strong> Budget total $11,777 · Meta $5,375 · Google $6,402. Nueva campaña: "Web en 10" activa los últimos 7 días de agosto.</div>
+  <div class="bud-hero">
+    <h2>$11,777 — Budget planificado agosto 2026</h2>
+    <p>vs $11,445 en julio (+$332, +2.9%) · vs $11,510 en junio (+$267)</p>
+    <div class="bud-row">
+      <div class="bud-kpi"><div class="bkl">Meta agosto</div><div class="bv">$5,375</div><div class="bkd" style="color:#f0a0a0;">↓ vs julio –$350</div></div>
+      <div class="bud-kpi"><div class="bkl">Google agosto</div><div class="bv">$6,402</div><div class="bkd" style="color:#6fdfaa;">↑ vs julio +$682</div></div>
+      <div class="bud-kpi"><div class="bkl">% Meta / Google</div><div class="bv">46% / 54%</div><div class="bkd" style="color:rgba(255,255,255,.5);">julio fue 50% / 50%</div></div>
+      <div class="bud-kpi"><div class="bkl">Daily Meta / Google</div><div class="bv">$175 / $232</div><div class="bkd" style="color:rgba(255,255,255,.5);">31 días · agosto</div></div>
+    </div>
+  </div>
+  <div class="r2">
+    <div class="card">
+      <div class="ctit">Por plataforma — junio · julio · agosto</div>
+      <div class="bbar-lbl"><span style="color:var(--fb);font-weight:500;">Meta Ads</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:11px;color:var(--gm);"><span style="width:28px;">Jun</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:47%;background:var(--fb);opacity:.4;"></div></div><span>$5,950</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:11px;color:var(--gm);"><span style="width:28px;">Jul</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:45%;background:var(--fb);opacity:.65;"></div></div><span>$5,725</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:12px;font-size:11px;color:var(--gm);"><span style="width:28px;">Ago</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:43%;background:var(--fb);"></div></div><span>$5,375</span></div>
+      <div class="bbar-lbl"><span style="color:#4285f4;font-weight:500;">Google Ads</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:11px;color:var(--gm);"><span style="width:28px;">Jun</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:44%;background:#4285f4;opacity:.4;"></div></div><span>$5,560</span></div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;font-size:11px;color:var(--gm);"><span style="width:28px;">Jul</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:45%;background:#4285f4;opacity:.65;"></div></div><span>$5,720</span></div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--gm);"><span style="width:28px;">Ago</span><div class="btrack" style="flex:1;margin-bottom:0;"><div class="bfill" style="width:51%;background:#4285f4;"></div></div><span>$6,402</span></div>
+    </div>
+    <div class="card">
+      <div class="ctit">Por objetivo — agosto 2026</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div><div class="bbar-lbl"><span>Posicionamiento YT</span><span style="font-weight:500;color:var(--nv);">$4,210 · 36%</span></div><div class="btrack"><div class="bfill" style="width:36%;background:var(--yt);"></div></div></div>
+        <div><div class="bbar-lbl"><span>Conversión / Venta (Meta)</span><span style="font-weight:500;color:var(--nv);">$3,605 · 31%</span></div><div class="btrack"><div class="bfill" style="width:31%;background:var(--nv);"></div></div></div>
+        <div><div class="bbar-lbl"><span>PMax Conversión (Google)</span><span style="font-weight:500;color:var(--nv);">$2,192 · 19%</span></div><div class="btrack"><div class="bfill" style="width:19%;background:#6a1b9a;"></div></div></div>
+        <div><div class="bbar-lbl"><span>Lead Generation (Meta)</span><span style="font-weight:500;color:var(--nv);">$1,770 · 15%</span></div><div class="btrack"><div class="bfill" style="width:15%;background:var(--su);"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ctit">Detalle por campaña — julio vs agosto 2026</div>
+    <div style="overflow-x:auto;">
+      <table class="tbl" style="min-width:520px;">
+        <thead><tr><th>Campaña</th><th>Plataforma</th><th>Daily julio</th><th>Budget julio</th><th>Daily agosto</th><th>Budget agosto</th><th>Δ</th></tr></thead>
+        <tbody>
+          <tr><td colspan="7" style="background:var(--of);color:var(--fb);font-size:10px;font-weight:600;padding:5px 10px;">META ADS</td></tr>
+          <tr><td>WEB 10 — BOFU</td><td style="color:var(--fb);font-size:11px;">Facebook</td><td>$45</td><td>$1,395</td><td>$45</td><td>$1,395</td><td class="neu">$0</td></tr>
+          <tr><td>Masterclass CCPW 2026</td><td style="color:var(--fb);font-size:11px;">Facebook</td><td>$40</td><td>$1,240</td><td>$40</td><td>$1,240</td><td class="neu">$0</td></tr>
+          <tr><td>Retargeting Membresía FB</td><td style="color:var(--fb);font-size:11px;">Facebook</td><td>$40</td><td>$1,320</td><td>$30</td><td>$970</td><td class="neg">–$350</td></tr>
+          <tr><td>Masterclass FB — Leads</td><td style="color:var(--fb);font-size:11px;">Facebook</td><td>$30</td><td>$885</td><td>$30</td><td>$885</td><td class="neu">$0</td></tr>
+          <tr><td>Masterclass IG — Leads</td><td style="color:var(--ig);font-size:11px;">Instagram</td><td>$30</td><td>$885</td><td>$30</td><td>$885</td><td class="neu">$0</td></tr>
+          <tr><td style="font-weight:500;">Subtotal Meta</td><td></td><td></td><td style="font-weight:500;">$5,725</td><td></td><td style="font-weight:500;">$5,375</td><td class="neg">–$350</td></tr>
+          <tr><td colspan="7" style="background:var(--of);color:#4285f4;font-size:10px;font-weight:600;padding:5px 10px;">GOOGLE ADS</td></tr>
+          <tr><td>Curso HG Video Largo</td><td style="color:var(--yt);font-size:11px;">YouTube</td><td>$20</td><td>$660</td><td>$30</td><td>$890</td><td class="pos">+$230</td></tr>
+          <tr><td>Masterclass CCPW Posicionamiento</td><td style="color:var(--yt);font-size:11px;">YouTube</td><td>$40</td><td>$1,240</td><td>$40</td><td>$1,240</td><td class="neu">$0</td></tr>
+          <tr><td>Promo Corta Masterclass</td><td style="color:var(--yt);font-size:11px;">YouTube</td><td>$30</td><td>$930</td><td>$20</td><td>$670</td><td class="neg">–$260</td></tr>
+          <tr><td>CCPW con IA — Views</td><td style="color:var(--yt);font-size:11px;">YouTube</td><td>$40</td><td>$1,200</td><td>$40</td><td>$1,200</td><td class="neu">$0</td></tr>
+          <tr><td>🆕 Nueva campaña Web en 10</td><td style="color:var(--yt);font-size:11px;">YouTube</td><td>—</td><td>—</td><td>$30</td><td style="color:var(--su);font-weight:500;">$210 <span style="font-size:10px;color:var(--gm);">(25–31 ago)</span></td><td class="pos">+$210</td></tr>
+          <tr><td>CCPW Performance Max</td><td style="color:#6a1b9a;font-size:11px;">PMax</td><td>$30</td><td>$930</td><td>$42</td><td>$1,262</td><td class="pos">+$332</td></tr>
+          <tr><td>Retargeting Membresía PMax</td><td style="color:#6a1b9a;font-size:11px;">PMax</td><td>$30</td><td>$760</td><td>$30</td><td>$930</td><td class="pos">+$170</td></tr>
+          <tr><td style="font-weight:500;">Subtotal Google</td><td></td><td></td><td style="font-weight:500;">$5,720</td><td></td><td style="font-weight:500;">$6,402</td><td class="pos">+$682</td></tr>
+          <tr><td style="font-weight:600;font-size:13px;">TOTAL</td><td></td><td></td><td style="font-weight:600;">$11,445</td><td></td><td style="font-weight:600;">$11,777</td><td class="pos">+$332</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="bl-sec">
+    <div class="ctit" style="margin-bottom:10px;">Decisiones de budget destacadas — julio → agosto</div>
+    <div class="bl"><div class="dot"></div><p>A finales de agosto se hará la promoción del video nuevo de "Web en 10 min" — nueva campaña de posicionamiento en YouTube activa los últimos 7 días (25–31 ago) con $210 de inversión. No estaba en el presupuesto original — se está abriendo espacio para testear antes de escalar en septiembre.</p></div>
+    <div class="bl"><div class="dot"></div><p>CCPW Performance Max sube $332 (de $930 a $1,262, daily $30→$42) — se aumenta al nivel propuesto para evitar fatiga de retargeting y aumentar conversiones cross-channel con Meta Ads.</p></div>
+    <div class="bl"><div class="dot"></div><p>Curso HG Video Largo recupera $230 (de $660 a $890, daily $20→$30) — se revierte el recorte de julio que impactó directamente las ventas. Pendiente evaluar si se actualiza el video o se sube presupuesto de awareness.</p></div>
+    <div class="bl"><div class="dot"></div><p>Retargeting Membresía FB baja $350 (de $1,320 a $970, daily $40→$30). El presupuesto liberado se redirige hacia PMax para aumentar el tráfico de la LP y alimentar mejor el funnel de retargeting.</p></div>
+    <div class="bl"><div class="dot"></div><p>Meta Lead Generation (FB + IG) se mantiene igual ($885 c/u) — no se escala hasta validar que el CPL de Masterclass IG vuelve a niveles eficientes tras la renovación de creativos.</p></div>
+  </div>
+</div>
+<script>
+function st(id,el){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('sec-'+id).classList.add('on');
+  el.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
